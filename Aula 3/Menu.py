@@ -1,13 +1,17 @@
 from Sistema import Sistema
+from Interface import Interface
 
 sistema = Sistema()
 
+if __name__=="__main__":
+
+
 while True:
-    print("1.Cadastrar Aluno")
-    print("2.Listar Alunos")
-    print("3.Cadastrar Tarefa")
-    print("4.Listar Tarefa")
-    print("5.Concluir Tarefa")
+    print("1. Cadastrar Aluno")
+    print("2. Listar Alunos")
+    print("3. Cadastrar Tarefa")
+    print("4. Listar Tarefa")
+    print("5. Concluir Tarefa")
     print("0. Sair")
 
     opcao = input("Escolha uma Opção :")
@@ -32,6 +36,3 @@ while True:
         break
     else:
         print("Opcão Invalida.")
-  
-   
-

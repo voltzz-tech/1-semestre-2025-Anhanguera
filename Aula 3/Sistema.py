@@ -5,6 +5,7 @@ class Sistema:
     def __init__(self):
         self.alunos = []
         self.contadorAluno = 1
+        self.contadorTarefa =1
 
     def cadastrarAluno(self, nome):
         aluno = Aluno(self.contadorAluno, nome)
@@ -29,4 +30,21 @@ class Sistema:
                 self.contadorTarefa += 1
                 print("Tarefa cadastrada!")
                 return
-    print("Aluno não encontrado!")
+        print("Aluno não encontrado!")
+
+
+    def listarTarefas(self, idAluno):
+        for aluno in self.aluno:
+            aluno.listarTarefas()
+            return
+        print("Aluno não encontrado.")
+
+    def concluirTarefa(self, idAluno, idTarefa):
+        for aluno in self.alunos:
+            if aluno.id == idAluno:
+                for tarefa in aluno.tarefas:
+                    if tarefa.id == idTarefa:
+                        tarefa.concluida = True
+                        print("Tarefa Concluida: ")
+                        return
+        print("Tarefa não encontrada: ")            
